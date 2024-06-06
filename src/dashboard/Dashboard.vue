@@ -71,7 +71,6 @@ import { defineComponent, reactive, ref } from "vue";
 import DashboardChart from '../dashboard/components/DashboardChart.vue';
 import DashboardChartStats from '../dashboard/components/DashboardChartStats.vue';
 import DashboardCostBenefitAnalysis from '../dashboard/components/DashboardCostBenefitAnalysis.vue';
-import TradeHistory from '../dashboard/components/TradeHistory.vue';
 import DashboardCalculator from '../dashboard/components/DashboardCalculator.vue';
 import moment from "moment/moment";
 import DashboardMarketData from '../dashboard/components/DashboardMarketData.vue';

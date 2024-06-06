@@ -23,7 +23,6 @@
 import { computed, defineComponent, onBeforeMount, ref, watch } from "vue";
 import type VueApexCharts from 'vue3-apexcharts';
 import type { ApexOptions } from 'apexcharts';
-import { useThemeStore } from '@/stores/theme';
 
 export default defineComponent({
   name: "dashboard-cost-benefit-analysis-item",
