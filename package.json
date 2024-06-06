@@ -9,10 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.21"
+    "@vueuse/core": "^10.10.0",
+    "apexcharts": "^3.49.1",
+    "axios": "^1.7.2",
+    "element-plus": "^2.7.4",
+    "moment": "^2.30.1",
+    "vue": "^3.4.21",
+    "vue3-apexcharts": "^1.5.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.77.4",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vue-tsc": "^2.0.6"
