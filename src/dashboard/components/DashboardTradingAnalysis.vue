@@ -20,10 +20,10 @@
            :class="{'dashboard-trading-analysis__option_active': sellMode === item.sell_mode }"
            v-show="timeMode !== 'daily' || item.sell_mode === 'daily'"
       >
-        <div class="form-check form-check-custom form-check-success form-check-solid">
+        <div class="ai-form-check">
           <div class="dashboard-trading-analysis__option__check-line"></div>
-          <input class="form-check-input" type="checkbox" :checked="sellMode === item.sell_mode" @change="setSellMode(item.sell_mode)"/>
-          <label class="form-check-label" for="">
+          <input class="ai-form-check-input" type="checkbox" :checked="sellMode === item.sell_mode" @change="setSellMode(item.sell_mode)"/>
+          <label class="ai-form-check-label" for="">
             {{ item.label }}
           </label>
         </div>
@@ -273,7 +273,7 @@ export default defineComponent({
     margin-bottom: 10px
 
   &__option
-    margin-bottom: 15px
+    margin-bottom: 12px
     padding: 10px 55px 10px 15px
     display: flex
     justify-content: space-between
@@ -281,22 +281,11 @@ export default defineComponent({
     border-radius: 6px
     border: 1px #E1E3EA dashed
 
-    .form-check-custom
-      width: 250px
-
     &__check-line
       height: 30px
       width: 3px
       background: rgba(62, 151, 255, 1)
       margin-right: 7px
-
-    .form-check-label
-      color: #3F4254
-      font-size: 16px
-      font-weight: 600
-      line-height: 16px
-      margin-left: 13px
-      margin-top: 4px
 
     &__item
 
