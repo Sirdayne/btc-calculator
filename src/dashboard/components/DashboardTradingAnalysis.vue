@@ -1,13 +1,8 @@
 <template>
-  <div class="card dashboard-trading-analysis">
-    <div class="card-header border-0 pt-5">
-      <h3 class="card-title align-items-start flex-column">
-        <span class="card-label fw-bold fs-3 mb-1">Trading analysis (Basic)</span>
-      </h3>
+  <div class="ai-card dashboard-trading-analysis">
+    <h3 class="ai-title">Trading analysis (Basic)</h3>
 
-    </div>
-
-    <div class="card-body">
+    <div class="dashboard-trading-analysis__content">
       <div class="dashboard-trading-analysis__tabs">
         <div class="dashboard-trading-analysis__tab dashboard-trading-analysis__tab_active">
           Result if BTC Sold
@@ -250,6 +245,9 @@ export default defineComponent({
 <style lang="sass">
 .dashboard-trading-analysis
   width: 100%
+
+  &__content
+    margin-top: 15px
 
   &__tabs
     margin-top: 10px

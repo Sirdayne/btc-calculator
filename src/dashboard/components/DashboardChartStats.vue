@@ -1,13 +1,10 @@
 <template>
-  <div class="dashboard-chart-stats card mb-4">
-    <!--begin::Header-->
+  <div class="dashboard-chart-stats ai-card">
     <div class="card-header border-0 pt-5">
-      <h3 class="card-title align-items-start flex-column">
-        <span class="card-label fw-bold fs-3 mb-1">Mining Financial Summary</span>
-        <span class="text-muted mt-1 fw-semibold fs-7">Stats for Selected Period</span>
-      </h3>
+      <h3 class="ai-title">Mining Financial Summary</h3>
+      <span class="ai-sub-title">Stats for Selected Period</span>
     </div>
-    <div class="card-body py-3">
+    <div class="dashboard-chart-stats__rows">
 
       <div class="dashboard-chart-stats__row">
         <div class="dashboard-chart-stats__row__label">Total Revenue</div>
@@ -104,6 +101,11 @@ export default defineComponent({
 
 <style lang="sass">
 .dashboard-chart-stats
+  margin-bottom: 10px
+
+  &__rows
+    margin-top: 20px
+
   &__row
     display: flex
     justify-content: space-between
@@ -119,6 +121,7 @@ export default defineComponent({
       font-weight: bold
       font-size: 15px
       max-width: 250px
+      text-align: start
 
     &__item
       color: rgb(7, 20, 55)

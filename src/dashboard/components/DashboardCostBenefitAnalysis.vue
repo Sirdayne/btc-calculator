@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="ai-card">
     <div class="dashboard-cost-benefit-analysis">
       <div class="dashboard-cost-benefit-analysis__title">Cost-Benefit Analysis</div>
 
@@ -155,7 +155,6 @@ export default defineComponent({
 
 <style lang="sass">
 .dashboard-cost-benefit-analysis
-  padding: 10px 20px
 
   &__title
     color: #7E8299

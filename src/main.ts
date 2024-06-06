@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
-import './style.css'
+import './reset.css'
+import './style.sass'
 import App from './App.vue'
 import VueApexCharts from "vue3-apexcharts";
 import ElementPlus from "element-plus";

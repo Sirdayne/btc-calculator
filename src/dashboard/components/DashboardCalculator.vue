@@ -1,80 +1,68 @@
 <template>
-  <div class="card dashboard-calculator" :class="widgetClasses">
-    <div class="card-header border-0 pt-5">
-      <h3 class="card-title align-items-start flex-column">
-        <span class="card-label fw-bold fs-3 mb-1">Historical Calculation</span>
-      </h3>
+  <div class="ai-card dashboard-calculator" :class="widgetClasses">
+    <h3 class="ai-title">Historical Calculation</h3>
 
-    </div>
+    <div class="dashboard-calculator-form">
+      <div class="dashboard-calculator-form__item">
+        <div class="label">Model</div>
 
-    <div class="card-body">
+        <el-select v-model="miner"  @change="setMinerData()" aria-label="Select miner name" value-key="id">
+          <el-option v-for="item in miners" :value="item" :label="item.miner_name" :key="item.id">{{ item?.miner_name }}</el-option>
+        </el-select>
 
-      <div class="dashboard-calculator-form">
-        <div class="dashboard-calculator-form__item">
-          <div class="label">Model</div>
-
-          <el-select v-model="miner"  @change="setMinerData()" aria-label="Select miner name" value-key="id">
-            <el-option v-for="item in miners" :value="item" :label="item.miner_name" :key="item.id">{{ item?.miner_name }}</el-option>
-          </el-select>
-
-        </div>
-
-        <div class="dashboard-calculator-form__item">
-          <div class="label">Quantity</div>
-
-          <el-input-number v-model="quantity" :min="1" placeholder="Quantity" />
-        </div>
-
-        <div class="dashboard-calculator-form__item">
-          <div class="label">Hashrate (TH/s)</div>
-
-          <el-input-number v-model="hashrate" :min="1" placeholder="Hashrate (TH/s)" />
-        </div>
-
-        <div class="dashboard-calculator-form__item">
-          <div class="label">Power (W)</div>
-
-          <el-input-number v-model="power" :min="1" placeholder="Power (W)" />
-        </div>
-
-        <div class="dashboard-calculator-form__item">
-          <div class="label">Energy Cost (cents per kWh)</div>
-
-          <el-input-number v-model="powerCost" :min="0" :step="0.1" placeholder="Energy Cost (cents per kWh)" />
-        </div>
-
-        <div class="dashboard-calculator-form__item">
-          <div class="label">Cost of hardware ($ per unit)</div>
-
-          <el-input-number v-model="costOfHw" :min="1" placeholder="Cost of hardware ($)" />
-        </div>
-
-        <div class="dashboard-calculator-form__item">
-          <div class="label">Start Date</div>
-          <el-date-picker v-model="startDate"></el-date-picker>
-        </div>
-
-        <div class="dashboard-calculator-form__item">
-          <div class="label">End Date</div>
-          <el-date-picker v-model="endDate"></el-date-picker>
-        </div>
-
-        <div class="dashboard-calculator-form__item">
-          <div class="label"></div>
-
-          <button class="button-primary button-primary__loader"
-                  :class="{'button-primary__loader_loading': loading}"
-                  :disabled="loading" @click="emitMiner()">
-              <span class="button-primary__loader__label">
-                Calculate
-              </span>
-            <span v-if="loading"
-                  class="spinner-border spinner-border-sm loader-left">
-              </span>
-          </button>
-        </div>
       </div>
 
+      <div class="dashboard-calculator-form__item">
+        <div class="label">Quantity</div>
+
+        <el-input-number v-model="quantity" :min="1" placeholder="Quantity" />
+      </div>
+
+      <div class="dashboard-calculator-form__item">
+        <div class="label">Hashrate (TH/s)</div>
+
+        <el-input-number v-model="hashrate" :min="1" placeholder="Hashrate (TH/s)" />
+      </div>
+
+      <div class="dashboard-calculator-form__item">
+        <div class="label">Power (W)</div>
+
+        <el-input-number v-model="power" :min="1" placeholder="Power (W)" />
+      </div>
+
+      <div class="dashboard-calculator-form__item">
+        <div class="label">Energy Cost (cents per kWh)</div>
+
+        <el-input-number v-model="powerCost" :min="0" :step="0.1" placeholder="Energy Cost (cents per kWh)" />
+      </div>
+
+      <div class="dashboard-calculator-form__item">
+        <div class="label">Cost of hardware ($ per unit)</div>
+
+        <el-input-number v-model="costOfHw" :min="1" placeholder="Cost of hardware ($)" />
+      </div>
+
+      <div class="dashboard-calculator-form__item">
+        <div class="label">Start Date</div>
+        <el-date-picker v-model="startDate"></el-date-picker>
+      </div>
+
+      <div class="dashboard-calculator-form__item">
+        <div class="label">End Date</div>
+        <el-date-picker v-model="endDate"></el-date-picker>
+      </div>
+
+      <div class="dashboard-calculator-form__item">
+        <div class="label"></div>
+
+        <el-button type="primary"
+                   :disabled="loading"
+                   @click="emitMiner()"
+                   class="ai-el-button"
+                   :loading="loading">
+          Calculate
+        </el-button>
+      </div>
     </div>
   </div>
 </template>

@@ -5,7 +5,7 @@
       Live Market Data
     </div>
 
-    <div class="d-block d-lg-flex">
+    <div class="live-market-data__content">
       <div class="live-market-data-item__container">
         <img
             alt="Logo"
@@ -94,6 +94,9 @@ export default defineComponent({
   background: #EEF6FF
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.03)
   border-radius: 12px
+
+  &__content
+    display: flex
 
   &__title
     color: #3F4254

@@ -1,10 +1,10 @@
 <template>
-  <div class="dashboard-chart card">
-    <div class="dashboard-chart-card-header border-0 pt-5">
-      <h3 class="card-title align-items-start flex-column">
-        <div class="card-label fw-bold fs-3 mb-1 mt-3">Financial overview</div>
-        <div class="text-muted fw-semibold fs-7 mt-2">{{ getDates }}</div>
-      </h3>
+  <div class="dashboard-chart ai-card">
+    <div class="dashboard-chart-card-header">
+      <div class="dashboard-chart-title">
+        <h3 class="ai-title">Financial overview</h3>
+        <div class="ai-sub-title">{{ getDates }}</div>
+      </div>
 
       <div class="chart-options">
         <DashboardChartOption @click="setActiveOption('revenue')" :active="activeOption === 'revenue'" label="Revenue" :img="'@/assets/img/chart_revenue.svg'"></DashboardChartOption>
@@ -16,25 +16,23 @@
     <div class="chart-filters__container">
       <div class="card-toolbar chart-filters">
         <div class="chart-currencies">
-          <div v-for="(item, index) in currencies" :key="index" class="button-primary" @click="setCurrency(item)" :class="{'active': currency === item}">{{ item }}</div>
+          <div v-for="(item, index) in currencies" :key="index" class="ai-button" @click="setCurrency(item)" :class="{'active': currency === item}">{{ item }}</div>
         </div>
 
         <div class="chart-times">
-          <div class="button-primary" @click="setTimeMode('monthly')" :class="{'active': timeMode === 'monthly'}">Month</div>
-          <div class="button-primary" @click="setTimeMode('daily')" :class="{'active': timeMode === 'daily'}">Day</div>
+          <div class="ai-button" @click="setTimeMode('monthly')" :class="{'active': timeMode === 'monthly'}">Month</div>
+          <div class="ai-button" @click="setTimeMode('daily')" :class="{'active': timeMode === 'daily'}">Day</div>
         </div>
       </div>
     </div>
 
-    <div class="card-body">
-      <apexchart
+    <apexchart
         ref="chartRef"
         type="bar"
         :options="chart"
         :series="series"
         :height="height"
-      ></apexchart>
-    </div>
+    ></apexchart>
   </div>
 </template>
 
@@ -653,30 +651,27 @@ export default defineComponent({
   display: flex
   justify-content: space-between
 
-  .button-primary
-    transition: .2s linear
-
 .chart-times
   display: flex
 
-.chart-times .button-primary
+.chart-times .ai-button
   color: #A1A5B7
   background: rgba(241, 241, 242, 1)
   margin-left: 5px
 
-.chart-times .button-primary.active
+.chart-times .ai-button.active
   color: #fff
   background: #3E97FF
 
 .chart-currencies
   display: flex
 
-.chart-currencies .button-primary
+.chart-currencies .ai-button
   color: #7E8299
   background: #fff
   margin-left: 5px
 
-.chart-currencies .button-primary.active
+.chart-currencies .ai-button.active
   color: #7E8299
   background: #F1F1F2
 
@@ -704,7 +699,7 @@ export default defineComponent({
   .chart-times
     margin-top: 20px
 
-  .chart-times .button-primary, .chart-currencies .button-primary
+  .chart-times .ai-button, .chart-currencies .ai-button
     margin: 5px 0
 
 </style>

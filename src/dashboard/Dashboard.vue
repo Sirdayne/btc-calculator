@@ -179,6 +179,12 @@ export default defineComponent({
   margin-top: 12px;
 }
 
+.ai-card {
+  border: 1px solid rgb(241, 241, 244);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.03) 0 3px 4px 0;
+}
+
 @media only screen and (max-width: 1100px) {
   .dashboard {
     padding: 0 10px;
