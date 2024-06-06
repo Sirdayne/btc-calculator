@@ -1,7 +1,7 @@
 <template>
   <div class="chart-option" :class="{ 'chart-option__active': active }">
     <div class="chart-option__img">
-      <img :src="img"/>
+      <slot name="chart-option-img"></slot>
     </div>
     <div class="chart-option__label">{{ label }}</div>
   </div>

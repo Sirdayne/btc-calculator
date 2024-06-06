@@ -7,9 +7,31 @@
       </div>
 
       <div class="chart-options">
-        <DashboardChartOption @click="setActiveOption('revenue')" :active="activeOption === 'revenue'" label="Revenue" :img="'@/assets/img/chart_revenue.svg'"></DashboardChartOption>
-        <DashboardChartOption @click="setActiveOption('cost')" :active="activeOption === 'cost'" label="Costs" :img="'@/assets/img/chart_costs.svg'"></DashboardChartOption>
-        <DashboardChartOption @click="setActiveOption('profit')" :active="activeOption === 'profit'" label="Profit" :img="'@/assets/img/chart_profit.svg'"></DashboardChartOption>
+        <DashboardChartOption
+            @click="setActiveOption('revenue')"
+            :active="activeOption === 'revenue'"
+            label="Revenue"
+            >
+          <template v-slot:chart-option-img>
+            <img src="@/assets/img/chart_revenue.svg">
+          </template>
+        </DashboardChartOption>
+        <DashboardChartOption
+            @click="setActiveOption('cost')"
+            :active="activeOption === 'cost'"
+            label="Costs">
+          <template v-slot:chart-option-img>
+            <img src="@/assets/img/chart_costs.svg">
+          </template>
+        </DashboardChartOption>
+        <DashboardChartOption
+            @click="setActiveOption('profit')"
+            :active="activeOption === 'profit'"
+            label="Profit">
+          <template v-slot:chart-option-img>
+            <img src="@/assets/img/chart_profit.svg">
+          </template>
+        </DashboardChartOption>
       </div>
     </div>
 
