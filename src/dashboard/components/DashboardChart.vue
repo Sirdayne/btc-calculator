@@ -69,7 +69,6 @@ import moment from "moment";
 export default defineComponent({
   name: "dashboard-chart",
   props: {
-    widgetClasses: String,
     height: Number,
     miner: Object,
     startDate: String,

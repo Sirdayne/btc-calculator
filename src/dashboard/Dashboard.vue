@@ -4,8 +4,6 @@
 
     <div class="dashboard-row">
       <DashboardCalculator
-          widget-classes="card-xl-stretch"
-          :height="330"
           :miner="miner"
           @setMiner="setMiner"
           :loading="loading"
@@ -59,11 +57,6 @@
     <DashboardMarketData></DashboardMarketData>
 
   </div>
-<!--  <div class="row g-5 g-xl-8">-->
-<!--    <div>-->
-<!--      <TradeHistory></TradeHistory>-->
-<!--    </div>-->
-<!--  </div>-->
 </template>
 
 <script lang="ts">

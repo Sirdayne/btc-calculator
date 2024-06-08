@@ -1,5 +1,5 @@
 <template>
-  <div class="ai-card dashboard-calculator" :class="widgetClasses">
+  <div class="ai-card dashboard-calculator">
     <h3 class="ai-title">Historical Calculation</h3>
 
     <div class="dashboard-calculator-form">
@@ -76,8 +76,6 @@ import { watchDebounced } from '@vueuse/core'
 export default defineComponent({
   name: "dashboard-calculator",
   props: {
-    widgetClasses: String,
-    height: Number,
     loading: Boolean,
   },
   emits: ['setMiner'],
