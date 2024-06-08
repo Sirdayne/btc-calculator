@@ -1,13 +1,13 @@
 {
   "name": "aidala-btc-calculator",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "files": "dist",
-  "main": "./dist/aidala-btc-calculator.umd.js",
-  "module": "./dist/aidala-btc-calculator.es.js",
+  "main": "./dist/aidala-btc-calculator.js",
+  "module": "./dist/aidala-btc-calculator.js",
   "exports": {
     ".": {
-      "import": "./dist/aidala-btc-calculator.es.js",
-      "require": "./dist/aidala-btc-calculator.umd.js"
+      "import": "./dist/aidala-btc-calculator.js",
+      "require": "./dist/aidala-btc-calculator.js"
     }
   },
   "scripts": {
