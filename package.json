@@ -1,11 +1,9 @@
 {
   "name": "aidala-btc-calculator",
-  "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "files": "dist",
   "main": "./dist/aidala-btc-calculator.umd.js",
   "module": "./dist/aidala-btc-calculator.es.js",
-  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/aidala-btc-calculator.es.js",
@@ -31,7 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.14.2",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",
     "@vue/tsconfig": "^0.1.3",
